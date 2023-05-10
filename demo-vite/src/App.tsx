@@ -15,7 +15,7 @@ function App() {
     console.log(response.data.results);
   }
   const handleFailedAPI = () => {
-    console.log("Succecss");
+    alert("Failed to load API")
   }
 
   const callAPI = () => {
@@ -36,7 +36,7 @@ function App() {
   useEffect(callAPI, []);
   // update frequently everytime input text changed
   useEffect(() => {
-    if (input !== '') {
+    if (input !== '') { // this condition to cancel first rendering
       callAPI();
     }
   },[input]) 
