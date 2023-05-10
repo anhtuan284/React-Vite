@@ -14,7 +14,7 @@ const List = () => {
 
     const [selectedIndex, setSelectIndex] = useState(-1); // chuẩn thì useState<number>(-1); def datetype
 
-    const handleClick = (item: string, index: number) => {
+    const handleClick = (index: number) => {
         setSelectIndex(index);
     }
     return (
@@ -26,7 +26,7 @@ const List = () => {
                 return (
                     <li className= {"list-group-item " + (selectedIndex == index ? "active" : "")} 
                         onClick={() => {
-                            handleClick(item, index);
+                            handleClick(index);
                         }}
                         key = {item}
                     >
