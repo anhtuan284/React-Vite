@@ -14,6 +14,16 @@ const MyComponent = () => {
         let newList = listToDo.filter(x => x.id !== id)
         setListToDo(newList)
     }
+
+    let today = new Date();
+
+    function formatDate(date :any) :string {
+        return new Intl.DateTimeFormat(
+            'en-US',
+            {weekday:'long'}
+        ).format(date);
+    }
+
     return (
         <div>
             <div>To do list:</div>
@@ -25,6 +35,7 @@ const MyComponent = () => {
             <div>I am doing + {newToDo}</div>
             <input type={'text'} onChange={(e) => setNewToDo(e.target.value)} />
             <button onClick={() => handleClick()}>Add to do</button>
+            <div style={{color: 'pink', backgroundColor: 'gray'}}>To do list for {formatDate(today)}</div>
         </div>
     )
 }
