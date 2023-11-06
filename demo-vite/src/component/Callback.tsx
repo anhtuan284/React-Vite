@@ -16,6 +16,7 @@ const Callback = ({getColor} : any) => {
             aria-label="input"
             onChange={handleChange}
             value = {activeColor}
+            style = {{marginBottom: "20px"}}
         />
     );
 };
