@@ -45,21 +45,10 @@ export default function EditProfile() {
     // TODO: update text labels
     }
 
-    function hide(el: any) {
-        el.style.display = 'none';
-    }
-
-    function show(el: any) {
-        el.style.display = '';
-    }
-
     const form = document.getElementById('form');
     const editButton = document.getElementById('editButton');
     const firstNameInput = document.getElementById('firstNameInput');
-    const firstNameText = document.getElementById('firstNameText');
     const lastNameInput = document.getElementById('lastNameInput');
-    const lastNameText = document.getElementById('lastNameText');
-    const helloText = document.getElementById('helloText');
 
     form?.addEventListener('submit', handleFormSubmit);
     firstNameInput?.addEventListener('input', handleFirstNameChange);
