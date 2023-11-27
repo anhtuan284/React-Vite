@@ -12,6 +12,8 @@ import Artists from './component/Artists.tsx'
 import BucketList from './component/BuckeList.tsx'
 import ShoppingCart from './component/Cart.tsx'
 import TaskApp from './component/ToDoApp/AppToDo.tsx'
+import Form from './component/FormAnswer/Form.tsx'
+import Choose from './component/StateStruct/Choose.tsx'
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   // <React.StrictMode>
@@ -26,6 +28,8 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
     <BucketList/>
     <ShoppingCart/>
     <TaskApp/>
+    <Form/>
+    <Choose/>
   </>
   // </React.StrictMode>,
 )
